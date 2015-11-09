@@ -39,6 +39,7 @@
   <!-- Everything below here is custom to .NET MF / Gadgeteer template-->
   <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" />
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Program.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -54,7 +55,28 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Gadgeteer" />
+    <Reference Include="GHI.Hardware, Version=4.3.7.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GHI.Usb, Version=4.3.7.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="GHIElectronics.Gadgeteer.FEZSpider, Version=4.3.7.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GTM.GHIElectronics.Button, Version=4.3.7.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GTM.GHIElectronics.Camera, Version=4.3.7.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GTM.GHIElectronics.DisplayT35, Version=4.3.7.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GTM.GHIElectronics.SDCard, Version=4.3.7.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GTM.GHIElectronics.USBClientDP, Version=4.3.7.10, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Microsoft.SPOT.Graphics" />

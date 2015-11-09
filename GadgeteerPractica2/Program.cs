@@ -11,6 +11,7 @@ using Microsoft.SPOT.Touch;
 using Gadgeteer.Networking;
 using GT = Gadgeteer;
 using GTM = Gadgeteer.Modules;
+using Gadgeteer.Modules.GHIElectronics;
 
 namespace GadgeteerPractica2
 {
@@ -31,10 +32,34 @@ namespace GadgeteerPractica2
                 timer.Tick +=<tab><tab>
                 timer.Start();
             *******************************************************************************************/
-
-
+     
+        
             // Use Debug.Print to show messages in Visual Studio's "Output" window during debugging.
+            //Thread.Sleep(2000);
+            
             Debug.Print("Program Started");
+            camera.BitmapStreamed += camera_BitmapStreamed;
+            camera.CameraConnected += camera_CameraConnected;
+            //camera.StartStreaming();
+            //this.button.ButtonPressed += button_ButtonPressed;  
+           
+        }
+
+        void camera_CameraConnected(Camera sender, EventArgs e)
+        {
+            Debug.Print("CameraConnected");
+            camera.StartStreaming();
+        }
+
+        void button_ButtonPressed(Button sender, Button.ButtonState state)
+        {
+            //this.camera.StartStreaming();
+        }
+
+        void camera_BitmapStreamed(Camera sender, Bitmap e)
+        {           
+            displayT35.SimpleGraphics.DisplayImage(e,0,0);
+            //this.camera.StopStreaming();
         }
     }
 }
