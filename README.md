@@ -3,7 +3,7 @@
 ### Practica2DSCC
 Guayaquil lunes 09/11/2015
 
-Implementación de sistema que atravez de un streaming permite tomar una fota y luego grabarla un una memoria sd.
+Implementación de sistema que a través de un streaming permite tomar una fota y luego grabarla un una memoria sd.
 
 Integrantes
 * Esteban Muñoz
